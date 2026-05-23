@@ -1,0 +1,1319 @@
+{
+  "nodes": [
+    {
+      "id": "main_entrance",
+      "label": "Main Entrance",
+      "lat": 12.911538,
+      "lng": 74.897841,
+      "type": "gate"
+    },
+    {
+      "id": "admin",
+      "label": "Admin Block",
+      "lat": 12.9108223,
+      "lng": 74.8987226,
+      "type": "admin"
+    },
+    {
+      "id": "idea_lab",
+      "label": "Idea Lab",
+      "lat": 12.9106783,
+      "lng": 74.8983536,
+      "type": "academic"
+    },
+    {
+      "id": "4wheeler_parking",
+      "label": "4 Wheeler Parking",
+      "lat": 12.9104654,
+      "lng": 74.89817,
+      "type": "parking"
+    },
+    {
+      "id": "canteen",
+      "label": "Canteen",
+      "lat": 12.9104233,
+      "lng": 74.8976361,
+      "type": "amenity"
+    },
+    {
+      "id": "stationary",
+      "label": "Stationary Shop",
+      "lat": 12.9106117,
+      "lng": 74.8974443,
+      "type": "amenity"
+    },
+    {
+      "id": "bank",
+      "label": "Bank",
+      "lat": 12.910681,
+      "lng": 74.8973495,
+      "type": "amenity"
+    },
+    {
+      "id": "car_parking_student",
+      "label": "Student Car Parking",
+      "lat": 12.9108117,
+      "lng": 74.8976405,
+      "type": "parking"
+    },
+    {
+      "id": "maintenance",
+      "label": "Maintenance Dept",
+      "lat": 12.9102067,
+      "lng": 74.8981865,
+      "type": "admin"
+    },
+    {
+      "id": "vegetable_mart",
+      "label": "Organic Vegetable Mart",
+      "lat": 12.9106903,
+      "lng": 74.8984341,
+      "type": "amenity"
+    },
+    {
+      "id": "academic_block1",
+      "label": "Academic Block 1",
+      "lat": 12.9104455,
+      "lng": 74.8984759,
+      "type": "academic"
+    },
+    {
+      "id": "academic_block1b",
+      "label": "Academic Block 1B",
+      "lat": 12.9101434,
+      "lng": 74.8986237,
+      "type": "academic"
+    },
+    {
+      "id": "security_transport",
+      "label": "Security & Transport",
+      "lat": 12.9112345,
+      "lng": 74.8987694,
+      "type": "admin"
+    },
+    {
+      "id": "synergy",
+      "label": "Synergy/Sceptix",
+      "lat": 12.9113006,
+      "lng": 74.8988832,
+      "type": "amenity"
+    },
+    {
+      "id": "dispensary",
+      "label": "Dispensary",
+      "lat": 12.9113939,
+      "lng": 74.8989128,
+      "type": "admin"
+    },
+    {
+      "id": "chapel",
+      "label": "Chapel",
+      "lat": 12.9111183,
+      "lng": 74.8991678,
+      "type": "landmark"
+    },
+    {
+      "id": "bethania",
+      "label": "Bethania",
+      "lat": 12.9115501,
+      "lng": 74.8990518,
+      "type": "admin"
+    },
+    {
+      "id": "bakery",
+      "label": "Bakery",
+      "lat": 12.9119527,
+      "lng": 74.8995266,
+      "type": "amenity"
+    },
+    {
+      "id": "parking_north",
+      "label": "North Parking",
+      "lat": 12.9124054,
+      "lng": 74.899871,
+      "type": "parking"
+    },
+    {
+      "id": "amphi",
+      "label": "Amphitheatre",
+      "lat": 12.9113796,
+      "lng": 74.8993899,
+      "type": "landmark"
+    },
+    {
+      "id": "lassi_corner",
+      "label": "Lassi Corner",
+      "lat": 12.911247,
+      "lng": 74.899572,
+      "type": "amenity"
+    },
+    {
+      "id": "castle",
+      "label": "Castle",
+      "lat": 12.91118,
+      "lng": 74.899593,
+      "type": "landmark"
+    },
+    {
+      "id": "block2",
+      "label": "Academic Block 2",
+      "lat": 12.9108751,
+      "lng": 74.8994701,
+      "type": "academic"
+    },
+    {
+      "id": "student_square",
+      "label": "Student Square",
+      "lat": 12.9107523,
+      "lng": 74.8989811,
+      "type": "landmark"
+    },
+    {
+      "id": "basketball_court",
+      "label": "Basketball Court",
+      "lat": 12.9104776,
+      "lng": 74.8989353,
+      "type": "sports"
+    },
+    {
+      "id": "library",
+      "label": "Library/SRC/CCN",
+      "lat": 12.910665,
+      "lng": 74.8993968,
+      "type": "academic"
+    },
+    {
+      "id": "block3",
+      "label": "Academic Block 3",
+      "lat": 12.9105226,
+      "lng": 74.8997097,
+      "type": "academic"
+    },
+    {
+      "id": "juice_corner",
+      "label": "Juice Corner",
+      "lat": 12.9098472,
+      "lng": 74.898841,
+      "type": "amenity"
+    },
+    {
+      "id": "volleyball_court",
+      "label": "Volleyball Court",
+      "lat": 12.910079,
+      "lng": 74.899474,
+      "type": "sports"
+    },
+    {
+      "id": "ctcs",
+      "label": "CTCS",
+      "lat": 12.909878,
+      "lng": 74.898748,
+      "type": "academic"
+    },
+    {
+      "id": "carpentry",
+      "label": "Carpentry",
+      "lat": 12.909746,
+      "lng": 74.898546,
+      "type": "academic"
+    },
+    {
+      "id": "electrical_panel",
+      "label": "Electrical Panel",
+      "lat": 12.909905,
+      "lng": 74.898437,
+      "type": "admin"
+    },
+    {
+      "id": "free_space",
+      "label": "Free Space",
+      "lat": 12.910263,
+      "lng": 74.899873,
+      "type": "landmark"
+    },
+    {
+      "id": "mech",
+      "label": "Mechanical Block",
+      "lat": 12.910928,
+      "lng": 74.900075,
+      "type": "academic"
+    },
+    {
+      "id": "sewage",
+      "label": "Sewage Plant",
+      "lat": 12.9110579,
+      "lng": 74.9006583,
+      "type": "admin"
+    },
+    {
+      "id": "veg_farm",
+      "label": "Vegetable Farm",
+      "lat": 12.910669,
+      "lng": 74.900662,
+      "type": "landmark"
+    },
+    {
+      "id": "pig_farm",
+      "label": "Pig Farm",
+      "lat": 12.9105007,
+      "lng": 74.9005032,
+      "type": "landmark"
+    },
+    {
+      "id": "waste_segregation",
+      "label": "Waste Segregation",
+      "lat": 12.9117947,
+      "lng": 74.8998417,
+      "type": "admin"
+    },
+    {
+      "id": "civil_block",
+      "label": "Civil Block",
+      "lat": 12.910982,
+      "lng": 74.899493,
+      "type": "academic"
+    },
+    {
+      "id": "strae_con",
+      "label": "Strae Con",
+      "lat": 12.9106941,
+      "lng": 74.8995953,
+      "type": "academic"
+    },
+    {
+      "id": "turtle_racing",
+      "label": "Turtle Racing Club",
+      "lat": 12.9107557,
+      "lng": 74.8998232,
+      "type": "academic"
+    },
+    {
+      "id": "stellum",
+      "label": "Stellum",
+      "lat": 12.9106139,
+      "lng": 74.8995953,
+      "type": "landmark"
+    },
+    {
+      "id": "girls_hostel",
+      "label": "Girls Hostel",
+      "lat": 12.909306,
+      "lng": 74.8995655,
+      "type": "admin"
+    },
+    {
+      "id": "boys_hostel",
+      "label": "Boys Hostel",
+      "lat": 12.9113446,
+      "lng": 74.900589,
+      "type": "admin"
+    }
+  ],
+  "edges": [
+    {
+      "from": "admin",
+      "to": "idea_lab",
+      "weight": 43
+    },
+    {
+      "from": "admin",
+      "to": "4wheeler_parking",
+      "weight": 72
+    },
+    {
+      "from": "admin",
+      "to": "vegetable_mart",
+      "weight": 35
+    },
+    {
+      "from": "admin",
+      "to": "academic_block1",
+      "weight": 50
+    },
+    {
+      "from": "admin",
+      "to": "academic_block1b",
+      "weight": 76
+    },
+    {
+      "from": "admin",
+      "to": "security_transport",
+      "weight": 46
+    },
+    {
+      "from": "admin",
+      "to": "synergy",
+      "weight": 56
+    },
+    {
+      "from": "admin",
+      "to": "dispensary",
+      "weight": 67
+    },
+    {
+      "from": "admin",
+      "to": "chapel",
+      "weight": 58
+    },
+    {
+      "from": "admin",
+      "to": "student_square",
+      "weight": 29
+    },
+    {
+      "from": "admin",
+      "to": "basketball_court",
+      "weight": 45
+    },
+    {
+      "from": "admin",
+      "to": "library",
+      "weight": 75
+    },
+    {
+      "from": "idea_lab",
+      "to": "4wheeler_parking",
+      "weight": 31
+    },
+    {
+      "from": "idea_lab",
+      "to": "car_parking_student",
+      "weight": 79
+    },
+    {
+      "from": "idea_lab",
+      "to": "maintenance",
+      "weight": 55
+    },
+    {
+      "from": "idea_lab",
+      "to": "vegetable_mart",
+      "weight": 9
+    },
+    {
+      "from": "idea_lab",
+      "to": "academic_block1",
+      "weight": 29
+    },
+    {
+      "from": "idea_lab",
+      "to": "academic_block1b",
+      "weight": 66
+    },
+    {
+      "from": "idea_lab",
+      "to": "security_transport",
+      "weight": 77
+    },
+    {
+      "from": "idea_lab",
+      "to": "student_square",
+      "weight": 69
+    },
+    {
+      "from": "idea_lab",
+      "to": "basketball_court",
+      "weight": 67
+    },
+    {
+      "from": "4wheeler_parking",
+      "to": "canteen",
+      "weight": 58
+    },
+    {
+      "from": "4wheeler_parking",
+      "to": "car_parking_student",
+      "weight": 69
+    },
+    {
+      "from": "4wheeler_parking",
+      "to": "maintenance",
+      "weight": 29
+    },
+    {
+      "from": "4wheeler_parking",
+      "to": "vegetable_mart",
+      "weight": 38
+    },
+    {
+      "from": "4wheeler_parking",
+      "to": "academic_block1",
+      "weight": 33
+    },
+    {
+      "from": "4wheeler_parking",
+      "to": "academic_block1b",
+      "weight": 61
+    },
+    {
+      "from": "4wheeler_parking",
+      "to": "electrical_panel",
+      "weight": 69
+    },
+    {
+      "from": "canteen",
+      "to": "stationary",
+      "weight": 30
+    },
+    {
+      "from": "canteen",
+      "to": "bank",
+      "weight": 42
+    },
+    {
+      "from": "canteen",
+      "to": "car_parking_student",
+      "weight": 43
+    },
+    {
+      "from": "canteen",
+      "to": "maintenance",
+      "weight": 64
+    },
+    {
+      "from": "stationary",
+      "to": "bank",
+      "weight": 13
+    },
+    {
+      "from": "stationary",
+      "to": "car_parking_student",
+      "weight": 31
+    },
+    {
+      "from": "bank",
+      "to": "car_parking_student",
+      "weight": 35
+    },
+    {
+      "from": "maintenance",
+      "to": "vegetable_mart",
+      "weight": 60
+    },
+    {
+      "from": "maintenance",
+      "to": "academic_block1",
+      "weight": 41
+    },
+    {
+      "from": "maintenance",
+      "to": "academic_block1b",
+      "weight": 48
+    },
+    {
+      "from": "maintenance",
+      "to": "ctcs",
+      "weight": 71
+    },
+    {
+      "from": "maintenance",
+      "to": "carpentry",
+      "weight": 64
+    },
+    {
+      "from": "maintenance",
+      "to": "electrical_panel",
+      "weight": 43
+    },
+    {
+      "from": "vegetable_mart",
+      "to": "academic_block1",
+      "weight": 28
+    },
+    {
+      "from": "vegetable_mart",
+      "to": "academic_block1b",
+      "weight": 64
+    },
+    {
+      "from": "vegetable_mart",
+      "to": "security_transport",
+      "weight": 71
+    },
+    {
+      "from": "vegetable_mart",
+      "to": "student_square",
+      "weight": 60
+    },
+    {
+      "from": "vegetable_mart",
+      "to": "basketball_court",
+      "weight": 59
+    },
+    {
+      "from": "academic_block1",
+      "to": "academic_block1b",
+      "weight": 37
+    },
+    {
+      "from": "academic_block1",
+      "to": "student_square",
+      "weight": 65
+    },
+    {
+      "from": "academic_block1",
+      "to": "basketball_court",
+      "weight": 50
+    },
+    {
+      "from": "academic_block1",
+      "to": "juice_corner",
+      "weight": 77
+    },
+    {
+      "from": "academic_block1",
+      "to": "ctcs",
+      "weight": 70
+    },
+    {
+      "from": "academic_block1",
+      "to": "carpentry",
+      "weight": 78
+    },
+    {
+      "from": "academic_block1",
+      "to": "electrical_panel",
+      "weight": 60
+    },
+    {
+      "from": "academic_block1b",
+      "to": "student_square",
+      "weight": 78
+    },
+    {
+      "from": "academic_block1b",
+      "to": "basketball_court",
+      "weight": 50
+    },
+    {
+      "from": "academic_block1b",
+      "to": "juice_corner",
+      "weight": 40
+    },
+    {
+      "from": "academic_block1b",
+      "to": "ctcs",
+      "weight": 32
+    },
+    {
+      "from": "academic_block1b",
+      "to": "carpentry",
+      "weight": 45
+    },
+    {
+      "from": "academic_block1b",
+      "to": "electrical_panel",
+      "weight": 33
+    },
+    {
+      "from": "security_transport",
+      "to": "synergy",
+      "weight": 14
+    },
+    {
+      "from": "security_transport",
+      "to": "dispensary",
+      "weight": 24
+    },
+    {
+      "from": "security_transport",
+      "to": "chapel",
+      "weight": 45
+    },
+    {
+      "from": "security_transport",
+      "to": "bethania",
+      "weight": 47
+    },
+    {
+      "from": "security_transport",
+      "to": "amphi",
+      "weight": 69
+    },
+    {
+      "from": "security_transport",
+      "to": "student_square",
+      "weight": 58
+    },
+    {
+      "from": "synergy",
+      "to": "dispensary",
+      "weight": 11
+    },
+    {
+      "from": "synergy",
+      "to": "chapel",
+      "weight": 37
+    },
+    {
+      "from": "synergy",
+      "to": "bethania",
+      "weight": 33
+    },
+    {
+      "from": "synergy",
+      "to": "amphi",
+      "weight": 56
+    },
+    {
+      "from": "synergy",
+      "to": "lassi_corner",
+      "weight": 75
+    },
+    {
+      "from": "synergy",
+      "to": "castle",
+      "weight": 78
+    },
+    {
+      "from": "synergy",
+      "to": "block2",
+      "weight": 79
+    },
+    {
+      "from": "synergy",
+      "to": "student_square",
+      "weight": 62
+    },
+    {
+      "from": "synergy",
+      "to": "civil_block",
+      "weight": 75
+    },
+    {
+      "from": "dispensary",
+      "to": "chapel",
+      "weight": 41
+    },
+    {
+      "from": "dispensary",
+      "to": "bethania",
+      "weight": 23
+    },
+    {
+      "from": "dispensary",
+      "to": "amphi",
+      "weight": 52
+    },
+    {
+      "from": "dispensary",
+      "to": "lassi_corner",
+      "weight": 73
+    },
+    {
+      "from": "dispensary",
+      "to": "castle",
+      "weight": 77
+    },
+    {
+      "from": "dispensary",
+      "to": "student_square",
+      "weight": 72
+    },
+    {
+      "from": "dispensary",
+      "to": "civil_block",
+      "weight": 78
+    },
+    {
+      "from": "chapel",
+      "to": "bethania",
+      "weight": 50
+    },
+    {
+      "from": "chapel",
+      "to": "amphi",
+      "weight": 38
+    },
+    {
+      "from": "chapel",
+      "to": "lassi_corner",
+      "weight": 46
+    },
+    {
+      "from": "chapel",
+      "to": "castle",
+      "weight": 47
+    },
+    {
+      "from": "chapel",
+      "to": "block2",
+      "weight": 42
+    },
+    {
+      "from": "chapel",
+      "to": "student_square",
+      "weight": 45
+    },
+    {
+      "from": "chapel",
+      "to": "basketball_court",
+      "weight": 76
+    },
+    {
+      "from": "chapel",
+      "to": "library",
+      "weight": 56
+    },
+    {
+      "from": "chapel",
+      "to": "civil_block",
+      "weight": 38
+    },
+    {
+      "from": "chapel",
+      "to": "strae_con",
+      "weight": 66
+    },
+    {
+      "from": "chapel",
+      "to": "stellum",
+      "weight": 73
+    },
+    {
+      "from": "bethania",
+      "to": "bakery",
+      "weight": 68
+    },
+    {
+      "from": "bethania",
+      "to": "amphi",
+      "weight": 41
+    },
+    {
+      "from": "bethania",
+      "to": "lassi_corner",
+      "weight": 66
+    },
+    {
+      "from": "bethania",
+      "to": "castle",
+      "weight": 72
+    },
+    {
+      "from": "bethania",
+      "to": "civil_block",
+      "weight": 79
+    },
+    {
+      "from": "bakery",
+      "to": "parking_north",
+      "weight": 63
+    },
+    {
+      "from": "bakery",
+      "to": "amphi",
+      "weight": 65
+    },
+    {
+      "from": "bakery",
+      "to": "lassi_corner",
+      "weight": 79
+    },
+    {
+      "from": "bakery",
+      "to": "waste_segregation",
+      "weight": 38
+    },
+    {
+      "from": "parking_north",
+      "to": "waste_segregation",
+      "weight": 68
+    },
+    {
+      "from": "amphi",
+      "to": "lassi_corner",
+      "weight": 25
+    },
+    {
+      "from": "amphi",
+      "to": "castle",
+      "weight": 31
+    },
+    {
+      "from": "amphi",
+      "to": "block2",
+      "weight": 57
+    },
+    {
+      "from": "amphi",
+      "to": "library",
+      "weight": 79
+    },
+    {
+      "from": "amphi",
+      "to": "waste_segregation",
+      "weight": 67
+    },
+    {
+      "from": "amphi",
+      "to": "civil_block",
+      "weight": 46
+    },
+    {
+      "from": "amphi",
+      "to": "strae_con",
+      "weight": 79
+    },
+    {
+      "from": "lassi_corner",
+      "to": "castle",
+      "weight": 8
+    },
+    {
+      "from": "lassi_corner",
+      "to": "block2",
+      "weight": 43
+    },
+    {
+      "from": "lassi_corner",
+      "to": "library",
+      "weight": 67
+    },
+    {
+      "from": "lassi_corner",
+      "to": "mech",
+      "weight": 65
+    },
+    {
+      "from": "lassi_corner",
+      "to": "waste_segregation",
+      "weight": 68
+    },
+    {
+      "from": "lassi_corner",
+      "to": "civil_block",
+      "weight": 31
+    },
+    {
+      "from": "lassi_corner",
+      "to": "strae_con",
+      "weight": 62
+    },
+    {
+      "from": "lassi_corner",
+      "to": "turtle_racing",
+      "weight": 61
+    },
+    {
+      "from": "lassi_corner",
+      "to": "stellum",
+      "weight": 70
+    },
+    {
+      "from": "castle",
+      "to": "block2",
+      "weight": 36
+    },
+    {
+      "from": "castle",
+      "to": "library",
+      "weight": 61
+    },
+    {
+      "from": "castle",
+      "to": "block3",
+      "weight": 74
+    },
+    {
+      "from": "castle",
+      "to": "mech",
+      "weight": 59
+    },
+    {
+      "from": "castle",
+      "to": "waste_segregation",
+      "weight": 73
+    },
+    {
+      "from": "castle",
+      "to": "civil_block",
+      "weight": 25
+    },
+    {
+      "from": "castle",
+      "to": "strae_con",
+      "weight": 54
+    },
+    {
+      "from": "castle",
+      "to": "turtle_racing",
+      "weight": 53
+    },
+    {
+      "from": "castle",
+      "to": "stellum",
+      "weight": 63
+    },
+    {
+      "from": "block2",
+      "to": "student_square",
+      "weight": 55
+    },
+    {
+      "from": "block2",
+      "to": "basketball_court",
+      "weight": 73
+    },
+    {
+      "from": "block2",
+      "to": "library",
+      "weight": 25
+    },
+    {
+      "from": "block2",
+      "to": "block3",
+      "weight": 47
+    },
+    {
+      "from": "block2",
+      "to": "mech",
+      "weight": 66
+    },
+    {
+      "from": "block2",
+      "to": "civil_block",
+      "weight": 12
+    },
+    {
+      "from": "block2",
+      "to": "strae_con",
+      "weight": 24
+    },
+    {
+      "from": "block2",
+      "to": "turtle_racing",
+      "weight": 41
+    },
+    {
+      "from": "block2",
+      "to": "stellum",
+      "weight": 32
+    },
+    {
+      "from": "student_square",
+      "to": "basketball_court",
+      "weight": 31
+    },
+    {
+      "from": "student_square",
+      "to": "library",
+      "weight": 46
+    },
+    {
+      "from": "student_square",
+      "to": "civil_block",
+      "weight": 61
+    },
+    {
+      "from": "student_square",
+      "to": "strae_con",
+      "weight": 67
+    },
+    {
+      "from": "student_square",
+      "to": "stellum",
+      "weight": 68
+    },
+    {
+      "from": "basketball_court",
+      "to": "library",
+      "weight": 54
+    },
+    {
+      "from": "basketball_court",
+      "to": "juice_corner",
+      "weight": 71
+    },
+    {
+      "from": "basketball_court",
+      "to": "volleyball_court",
+      "weight": 73
+    },
+    {
+      "from": "basketball_court",
+      "to": "ctcs",
+      "weight": 70
+    },
+    {
+      "from": "basketball_court",
+      "to": "strae_con",
+      "weight": 75
+    },
+    {
+      "from": "basketball_court",
+      "to": "stellum",
+      "weight": 73
+    },
+    {
+      "from": "library",
+      "to": "block3",
+      "weight": 37
+    },
+    {
+      "from": "library",
+      "to": "volleyball_court",
+      "weight": 66
+    },
+    {
+      "from": "library",
+      "to": "free_space",
+      "weight": 68
+    },
+    {
+      "from": "library",
+      "to": "mech",
+      "weight": 79
+    },
+    {
+      "from": "library",
+      "to": "civil_block",
+      "weight": 37
+    },
+    {
+      "from": "library",
+      "to": "strae_con",
+      "weight": 22
+    },
+    {
+      "from": "library",
+      "to": "turtle_racing",
+      "weight": 47
+    },
+    {
+      "from": "library",
+      "to": "stellum",
+      "weight": 22
+    },
+    {
+      "from": "block3",
+      "to": "volleyball_court",
+      "weight": 56
+    },
+    {
+      "from": "block3",
+      "to": "free_space",
+      "weight": 34
+    },
+    {
+      "from": "block3",
+      "to": "mech",
+      "weight": 60
+    },
+    {
+      "from": "block3",
+      "to": "civil_block",
+      "weight": 56
+    },
+    {
+      "from": "block3",
+      "to": "strae_con",
+      "weight": 23
+    },
+    {
+      "from": "block3",
+      "to": "turtle_racing",
+      "weight": 29
+    },
+    {
+      "from": "block3",
+      "to": "stellum",
+      "weight": 16
+    },
+    {
+      "from": "juice_corner",
+      "to": "volleyball_court",
+      "weight": 73
+    },
+    {
+      "from": "juice_corner",
+      "to": "ctcs",
+      "weight": 11
+    },
+    {
+      "from": "juice_corner",
+      "to": "carpentry",
+      "weight": 34
+    },
+    {
+      "from": "juice_corner",
+      "to": "electrical_panel",
+      "weight": 44
+    },
+    {
+      "from": "volleyball_court",
+      "to": "free_space",
+      "weight": 48
+    },
+    {
+      "from": "volleyball_court",
+      "to": "strae_con",
+      "weight": 70
+    },
+    {
+      "from": "volleyball_court",
+      "to": "stellum",
+      "weight": 61
+    },
+    {
+      "from": "ctcs",
+      "to": "carpentry",
+      "weight": 26
+    },
+    {
+      "from": "ctcs",
+      "to": "electrical_panel",
+      "weight": 34
+    },
+    {
+      "from": "carpentry",
+      "to": "electrical_panel",
+      "weight": 21
+    },
+    {
+      "from": "free_space",
+      "to": "mech",
+      "weight": 77
+    },
+    {
+      "from": "free_space",
+      "to": "pig_farm",
+      "weight": 73
+    },
+    {
+      "from": "free_space",
+      "to": "strae_con",
+      "weight": 57
+    },
+    {
+      "from": "free_space",
+      "to": "turtle_racing",
+      "weight": 55
+    },
+    {
+      "from": "free_space",
+      "to": "stellum",
+      "weight": 49
+    },
+    {
+      "from": "mech",
+      "to": "sewage",
+      "weight": 65
+    },
+    {
+      "from": "mech",
+      "to": "veg_farm",
+      "weight": 70
+    },
+    {
+      "from": "mech",
+      "to": "pig_farm",
+      "weight": 66
+    },
+    {
+      "from": "mech",
+      "to": "civil_block",
+      "weight": 63
+    },
+    {
+      "from": "mech",
+      "to": "strae_con",
+      "weight": 58
+    },
+    {
+      "from": "mech",
+      "to": "turtle_racing",
+      "weight": 33
+    },
+    {
+      "from": "mech",
+      "to": "stellum",
+      "weight": 63
+    },
+    {
+      "from": "mech",
+      "to": "boys_hostel",
+      "weight": 72
+    },
+    {
+      "from": "sewage",
+      "to": "veg_farm",
+      "weight": 43
+    },
+    {
+      "from": "sewage",
+      "to": "pig_farm",
+      "weight": 64
+    },
+    {
+      "from": "sewage",
+      "to": "boys_hostel",
+      "weight": 33
+    },
+    {
+      "from": "veg_farm",
+      "to": "pig_farm",
+      "weight": 25
+    },
+    {
+      "from": "veg_farm",
+      "to": "boys_hostel",
+      "weight": 76
+    },
+    {
+      "from": "pig_farm",
+      "to": "turtle_racing",
+      "weight": 79
+    },
+    {
+      "from": "civil_block",
+      "to": "strae_con",
+      "weight": 34
+    },
+    {
+      "from": "civil_block",
+      "to": "turtle_racing",
+      "weight": 44
+    },
+    {
+      "from": "civil_block",
+      "to": "stellum",
+      "weight": 42
+    },
+    {
+      "from": "strae_con",
+      "to": "turtle_racing",
+      "weight": 26
+    },
+    {
+      "from": "strae_con",
+      "to": "stellum",
+      "weight": 9
+    },
+    {
+      "from": "turtle_racing",
+      "to": "stellum",
+      "weight": 29
+    },
+    {
+      "from": "girls_hostel",
+      "to": "volleyball_court",
+      "weight": 87
+    },
+    {
+      "from": "girls_hostel",
+      "to": "ctcs",
+      "weight": 109
+    },
+    {
+      "from": "girls_hostel",
+      "to": "juice_corner",
+      "weight": 99
+    },
+    {
+      "from": "main_entrance",
+      "to": "admin",
+      "weight": 124
+    }
+  ]
+}
