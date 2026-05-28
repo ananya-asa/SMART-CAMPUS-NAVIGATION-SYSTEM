@@ -16,7 +16,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  background: linear-gradient(135deg, #3f5fe1 0%, #81c1cce6 35%, #EFF8F9 65%, #83E0EA 100%);
+  background: linear-gradient(135deg, rgba(66, 127, 250, 0.908) 0%, #81c1cce6 35%, hsl(186, 69%, 74%) 65%, rgba(66, 127, 250, 0.908) 100%);
   overflow: hidden;
 }
 
@@ -294,24 +294,68 @@ body {
 }
 
 /* ─── TRANSITION OVERLAY ─── */
-
 .transitionScreen {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #3c8990;
-  z-index: 99999;
-}
 
+  overflow: hidden;
+  z-index: 99999;
+
+  background: linear-gradient(
+    135deg,
+    #427ffa 0%,
+    #6eb6ff 25%,
+    #30a1b5 50%,
+    #7ed6df 75%,
+    #4f8fff 100%
+  );
+
+  background-size: 200% 200%;
+  animation: gradientMove 8s ease infinite;
+
+  box-shadow:
+    inset 0 0 180px rgba(255,255,255,0.18),
+    inset 0 0 280px rgba(184,244,255,0.22);
+}
 .transitionLottie {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+.transitionScreen::before,
+.transitionScreen::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.45;
+}
+
+.transitionScreen::before {
+  width: 350px;
+  height: 350px;
+  background: #7ed6df;
+
+  top: -100px;
+  left: -100px;
+}
+
+.transitionScreen::after {
+  width: 400px;
+  height: 400px;
+  background: #4facfe;
+
+  bottom: -120px;
+  right: -120px;
 }
 .startBtn:hover{
 
@@ -319,4 +363,17 @@ transform:
 translateY(-3px)
 scale(1.05);
 
+}
+@keyframes gradientMove {
+  0% {
+    background-position: left;
+  }
+
+  50% {
+    background-position: right;
+  }
+
+  100% {
+    background-position: left;
+  }
 }

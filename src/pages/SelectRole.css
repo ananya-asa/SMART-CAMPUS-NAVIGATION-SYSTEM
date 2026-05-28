@@ -13,7 +13,7 @@
   flex-direction: column;
   align-items: center;
   padding-top: 40px;
-  background: linear-gradient(135deg, #3f5fe1, #F5FBFC, #3f5fe1);
+  background: linear-gradient(135deg, rgba(66, 127, 250, 0.908), #F5FBFC, rgba(66, 127, 250, 0.908));
   overflow: hidden;
 }
 

@@ -77,7 +77,7 @@ className="walkingAnimation"
   onClick={handleStart}
   style={{ pointerEvents: showTransition ? 'none' : 'auto' }}
 >
-  📍 Get Started
+    Get Started
   <span className="arrow">›</span>
 </button>
 
