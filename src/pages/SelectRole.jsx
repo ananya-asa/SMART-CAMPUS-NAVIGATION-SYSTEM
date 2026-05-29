@@ -1,113 +1,36 @@
-import { useNavigate } from "react-router-dom";
-import "./SelectRole.css";
+import { useNavigate } from 'react-router-dom'
+import { ROLE_IDS, ROLES, getMapPath } from '../constants/roles'
+import './SelectRole.css'
 
-import student from "../assets/student.png";
-import faculty from "../assets/faculty.png";
-import visitor from "../assets/visitor.png";
-import admin from "../assets/admin.png";
+export default function SelectRole() {
+  const navigate = useNavigate()
 
-function SelectRole() {
+  return (
+    <div className="rolePage">
+      <h1 className="pageTitle">MAARGAM</h1>
+      <div className="titleUnderline" />
 
-const navigate = useNavigate();
+      <p className="tagLine">Navigate Smarter, Reach Faster</p>
+      <p className="description">
+        Choose your role to open the interactive SJEC campus map with routes and live guidance.
+      </p>
 
-return (
-
-<div className="rolePage">
-
-<h1 className="pageTitle">
-MAARGAM
-</h1>
-
-
-<div className="titleUnderline"></div>
-
-<p className="tagLine">
-Navigate Smarter, Reach Faster
-</p>
-
-<p className="description">
-Seamlessly move through the campus with optimized routes and interactive guidance.
-</p>
-
-<div className="roleContainer">
-
-{/* Student */}
-
-<div
-className="roleCard"
-onClick={() => navigate("/student")}
->
-
-<img
-src={student}
-alt="Student"
-className="roleImage"
-/>
-
-<h2>Student</h2>
-
-</div>
-
-
-{/* Faculty */}
-
-<div
-className="roleCard"
-onClick={() => navigate("/faculty")}
->
-
-<img
-src={faculty}
-alt="Faculty"
-className="roleImage"
-/>
-
-<h2>Faculty</h2>
-
-</div>
-
-
-{/* Visitor */}
-
-<div
-className="roleCard"
-onClick={() => navigate("/visitor")}
->
-
-<img
-src={visitor}
-alt="Visitor"
-className="roleImage"
-/>
-
-<h2>Visitor</h2>
-
-</div>
-
-
-{/* Admin */}
-
-<div
-className="roleCard"
-onClick={() => navigate("/admin")}
->
-
-<img
-src={admin}
-alt="Admin"
-className="roleImage"
-/>
-
-<h2>Admin</h2>
-
-</div>
-
-</div>
-
-</div>
-
-);
-
+      <div className="roleContainer">
+        {ROLE_IDS.map((roleId) => {
+          const role = ROLES[roleId]
+          return (
+            <button
+              key={roleId}
+              type="button"
+              className="roleCard"
+              onClick={() => navigate(getMapPath(roleId))}
+            >
+              <img src={role.image} alt={role.label} className="roleImage" />
+              <h2>{role.label}</h2>
+            </button>
+          )
+        })}
+      </div>
+    </div>
+  )
 }
-
-export default SelectRole;

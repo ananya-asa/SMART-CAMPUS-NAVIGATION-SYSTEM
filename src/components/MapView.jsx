@@ -244,7 +244,7 @@ function createGPSMarkerElement() {
   return el
 }
 
-export default function MapView() {
+export default function MapView({ userRole = 'visitor', roleLabel = 'Visitor' }) {
   const mapContainer = useRef(null)
   const mapRef = useRef(null)
   const watchIdRef = useRef(null)
@@ -770,6 +770,7 @@ export default function MapView() {
         <div className="sjec-title">
           <h1>SJEC Campus Nav</h1>
           <p>St Joseph Engineering College · Vamanjoor</p>
+          <span className="sjec-role-badge" data-role={userRole}>{roleLabel}</span>
         </div>
 
         <div className="sjec-search-wrap">

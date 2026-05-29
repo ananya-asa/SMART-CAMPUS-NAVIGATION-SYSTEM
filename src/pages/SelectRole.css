@@ -79,6 +79,9 @@ align-items:center;
 }
 
 .roleCard{
+  border: none;
+  font: inherit;
+  cursor: pointer;
 
 width:350px;
 height:90px;

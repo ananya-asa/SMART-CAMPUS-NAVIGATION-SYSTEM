@@ -1,12 +1,25 @@
-import MapView from './components/MapView'
-import 'mapbox-gl/dist/mapbox-gl.css'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import Welcome from './pages/Welcome'
+import SelectRole from './pages/SelectRole'
+import MapPage from './pages/MapPage'
+import './App.css'
 
-function App() {
+export default function App() {
   return (
-    <div style={{ width: '100vw', height: '100vh' }}>
-      <MapView />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/select" element={<SelectRole />} />
+        <Route path="/map/:role" element={<MapPage />} />
+
+        {/* Backward-compatible redirects from the frontend branch */}
+        <Route path="/student" element={<Navigate to="/map/student" replace />} />
+        <Route path="/faculty" element={<Navigate to="/map/faculty" replace />} />
+        <Route path="/admin" element={<Navigate to="/map/admin" replace />} />
+        <Route path="/visitor" element={<Navigate to="/map/visitor" replace />} />
+
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
-
-export default App

@@ -1,49 +1,5 @@
-.container{
-
-height:100vh;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-background:#0F172A;
-
-color:white;
-}
-
-.cards{
-
-display:flex;
-gap:30px;
-margin-top:30px;
-flex-wrap:wrap;
-justify-content:center;
-
-}
-
-.card{
-
-background:white;
-color:black;
-
-padding:30px;
-
-width:150px;
-
-text-align:center;
-
-border-radius:15px;
-
-cursor:pointer;
-
-transition:.3s;
-}
-
-.card:hover{
-
-transform:scale(1.1);
+.map-page {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }

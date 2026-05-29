@@ -1,92 +1,61 @@
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-import Lottie from "lottie-react";
+import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import LottieAnimation from '../components/LottieAnimation'
+import animationData from '../assets/mann.json'
+import transitionAnimation from '../assets/transition.json'
+import './Welcome.css'
 
-import animationData from "../assets/mann.json";
-import transitionAnimation from "../assets/transition.json";
+export default function Welcome() {
+  const navigate = useNavigate()
+  const [showTransition, setShowTransition] = useState(false)
 
-import "./Welcome.css";
+  const handleStart = () => {
+    setShowTransition(true)
+    setTimeout(() => navigate('/select'), 2500)
+  }
 
-function Welcome(){
+  return (
+    <div className="landing">
+      {showTransition && (
+        <div className="transitionScreen">
+          <LottieAnimation
+            animationData={transitionAnimation}
+            loop={false}
+            className="transitionLottie"
+            placeholderLabel="Transition animation coming soon…"
+          />
+        </div>
+      )}
 
-const navigate = useNavigate();
+      <div className="topWave" />
+      <div className="bottomLeft" />
+      <div className="bottomRight" />
+      <div className="dotGrid topDots" />
+      <div className="dotGrid bottomDots" />
 
-const [showTransition,setShowTransition] = useState(false);
+      <div className="hero">
+        <div className="logoSection">
+          <img src="/NObg.png" alt="MAARGAM logo" className="mainLogo" />
+        </div>
 
-const handleStart=()=>{
+        <div className="animationSection">
+          <LottieAnimation
+            animationData={animationData}
+            loop
+            className="walkingAnimation"
+            placeholderLabel="Welcome animation coming soon…"
+          />
+        </div>
 
-setShowTransition(true);
-
-setTimeout(()=>{
-
-navigate("/select");
-
-},2500);
-
-};
-
-return(
-
-<div className="landing">
-
-{showTransition && (
-
-<div className="transitionScreen">
-
-<Lottie
-animationData={transitionAnimation}
-loop={false}
-className="transitionLottie"
-/>
-
-</div>
-
-)}
-
-<div className="topWave"></div>
-<div className="bottomLeft"></div>
-<div className="bottomRight"></div>
-
-<div className="dotGrid topDots"></div>
-<div className="dotGrid bottomDots"></div>
-
-<div className="hero">
-
-<div className="logoSection">
-
-<img
-src="/NObg.png"
-alt="Logo"
-className="mainLogo"
-/>
-
-</div>
-
-<div className="animationSection">
-
-<Lottie
-animationData={animationData}
-loop={true}
-className="walkingAnimation"
-/>
-
-</div>
-
-<button
-  className="startBtn"
-  onClick={handleStart}
-  style={{ pointerEvents: showTransition ? 'none' : 'auto' }}
->
-    Get Started
-  <span className="arrow">›</span>
-</button>
-
-</div>
-
-</div>
-
-);
-
+        <button
+          className="startBtn"
+          onClick={handleStart}
+          style={{ pointerEvents: showTransition ? 'none' : 'auto' }}
+        >
+          Get Started
+          <span className="arrow">›</span>
+        </button>
+      </div>
+    </div>
+  )
 }
-
-export default Welcome;
