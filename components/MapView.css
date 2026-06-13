@@ -607,55 +607,6 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-.indoor-directions-title {
-  color: #38bdf8;        /* cyan accent — matches your theme */
-  font-size: 12px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 8px;
-}
-
-.indoor-step-text {
-  color: #e2e8f0;        /* bright white-ish, easy to read */
-  font-size: 13px;
-  line-height: 1.5;
-}
-
-.indoor-step-num {
-  color: #38bdf8;        /* cyan step numbers */
-  font-weight: 700;
-  font-size: 11px;
-  min-width: 16px;
-}
-
-.indoor-floor-tag {
-  color: #64748b;        /* muted grey for the floor label at bottom */
-  font-size: 11px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  margin-top: 8px;
-}
-
-.building-popup-title {
-  color: #e2e8f0;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.building-room-id {
-  color: #38bdf8;        /* cyan for room numbers like 3001, 3002 */
-  font-size: 12px;
-  font-weight: 600;
-  min-width: 40px;
-}
-
-.building-room-name {
-  color: #e2e8f0;        /* bright white for room names */
-  font-size: 12px;
-}
 /* ── Sidebar Navigation ───────────────────────────────────────────── */
 .sjec-sidebar {
   position: absolute;
@@ -737,25 +688,23 @@
   z-index: 40;
 }
 
-.building-floor-tabs { display: flex; flex-wrap: wrap; gap: 4px; margin: 12px 0; }
+.building-floor-tabs { display: flex; gap: 4px; margin: 12px 0; }
 .building-floor-tab {
-  padding: 5px 10px; background: rgba(255,255,255,0.05);
-  border: none; border-radius: 6px; color: #94a3b8; cursor: pointer; font-size: 11px; white-space: nowrap;
+  flex: 1; padding: 6px; background: rgba(255,255,255,0.05);
+  border: none; border-radius: 6px; color: #94a3b8; cursor: pointer;
 }
-.building-floor-tab.active { background: #38bdf8; color: #020812; font-weight: 600; }
+.building-floor-tab.active { background: #38bdf8; color: #020812; }
 
 .building-rooms-list { max-height: 200px; overflow-y: auto; }
 .building-room-row { display: flex; align-items: center; gap: 8px; padding: 6px 0; }
 .building-room-dot { width: 6px; height: 6px; border-radius: 50%; }
 
 /* ── Faculty Locator ─────────────────────────────────────────────── */
-.faculty-list { display: flex; flex-direction: column; gap: 6px; overflow-y: auto; max-height: calc(100vh - 280px); }
+.faculty-list { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
 .faculty-item {
   display: flex; align-items: center; gap: 12px;
   padding: 10px; background: rgba(255,255,255,0.03);
-  border-radius: 8px; transition: background 0.2s;
+  border-radius: 8px;
 }
-.faculty-item:hover { background: rgba(251,191,36,0.06); }
-.faculty-item.selected { background: rgba(56,189,248,0.08); border: 1px solid rgba(56,189,248,0.25); }
 .faculty-item-name { font-size: 13px; font-weight: 500; color: #fff; }
 .faculty-item-meta { font-size: 11px; color: #94a3b8; }

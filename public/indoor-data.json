@@ -1,0 +1,24 @@
+{
+  "block3": {
+    "name": "Academic Block 3",
+    "floors": {
+      "0": { "name": "Ground Floor", "rooms": { "3001": "Melodium", "3002": "Tinkering & Engg Exploration 2", "3003": "AECAL / Chemistry Research", "3004": "Dept of Chemistry", "3005": "Research Centre", "3006": "Chemistry Lab", "3007": "Chemistry Lab", "3008": "Naval Wing / TT Room", "3010": "Empty", "3011": "Dept of Physical Education", "3012": "Prerana Hall" } },
+      "2": { "name": "2nd Floor", "rooms": { "3101": "Lecture Hall", "3102": "Lecture Hall", "3103": "Lecture Hall", "3104": "Classroom", "3105": "Classroom", "3106": "Maths Research Lab", "3107": "English Lab", "3108": "Empty", "3109": "Faculty Room (Maths)", "3110": "Dept Office (Maths)", "3111": "Empty", "3112": "Faculty Cabins (Humanities)", "3113": "Classroom" } },
+      "3": { "name": "3rd Floor", "rooms": { "3201": "Classroom", "3202": "Classroom", "3203": "Classroom", "3204": "Classroom", "3205": "Classroom", "3206": "Faculty Cabin 2 (Maths)", "3207": "Matlab", "3208": "Empty", "3209": "Physics Research Lab", "3210": "Empty", "3211": "Faculty Cabin", "3212": "Empty", "3213": "Lab" } },
+      "4": { "name": "4th Floor", "rooms": { "3301": "Classroom", "3302": "Classroom", "3303": "Classroom", "3304": "Classroom", "3305": "Classroom", "3306": "EGD Lab", "3307": "EGD Lab", "3308": "Empty", "3309": "Faculty Cabin", "3310": "Empty", "3311": "Dept Office", "3312": "Computer Aid Machine Drawing Lab", "3313": "Computer Aid Machine Drawing Lab" } },
+      "5": { "name": "5th Floor", "rooms": { "3401": "Industrial Automation & PLC Lab", "3402": "Classroom", "3403": "Classroom", "3404": "Classroom", "3405": "Classroom", "3406": "Lab", "3407": "Lab", "3408": "Faculty Cabin", "3409": "Faculty Cabin", "3410": "Lab", "3411": "Lab" } },
+      "6": { "name": "6th Floor", "rooms": { "3502": "NoSQL / SSCD Lab", "3503": "Classroom", "3504": "Classroom", "3505": "Classroom", "3506": "Classroom", "3507": "Classroom", "3509": "DS / AIML / DPD Lab", "3510": "Cisco / DPD / Project Lab", "3511": "Faculty Cabin", "3514": "Dept Office", "3515": "Meeting Room", "3516": "Research Lab", "3517": "DBMS / Cloud Lab" } },
+      "7": { "name": "7th Floor", "rooms": { "3601": "Classroom", "3602": "Classroom", "3603": "Classroom", "3604": "Classroom", "3605": "Classroom", "3606": "Classroom", "3608": "AI/Java/ML Lab", "3609": "DBMS/DIP/MAD Lab", "3610": "Integrated Lab", "3611": "Faculty Cabin", "3612": "Dept Office", "3613": "Faculty Cabin", "3614": "Ladies Washroom" } },
+      "8": { "name": "8th Floor", "rooms": { "3701": "Tutorial Room", "3702": "Faculty Room", "3703": "Classroom", "3704": "Classroom", "3705": "Classroom", "3707": "Computer Lab", "3708": "Research Lab", "3709": "Meeting Room", "3710": "Dean's Office", "3711": "Faculty Cabin" } }
+    }
+  },
+  "block2": {
+    "name": "Academic Block 2",
+    "floors": {
+      "2": { "name": "2nd Floor", "rooms": { "2102": "Library", "2103": "Laboratory", "2104": "Laboratory", "2105": "Staff Cabin", "2107": "Gents Washroom" } },
+      "3": { "name": "3rd Floor", "rooms": { "2201": "Faculty Cabin", "2202": "CN/Project Lab", "2203": "Internet/Comp Analysis Lab", "2204": "Classroom", "2205": "Research Lab (Tutorial Hall)", "2206": "Classroom", "2207": "Classroom", "2208": "Ladies Washroom", "2209": "Gents Washroom" } },
+      "4": { "name": "4th Floor", "rooms": { "2302": "Research", "2303": "Classroom", "2304": "Classroom", "2305": "Classroom", "2306": "Physics Lab", "2307": "Physics Lab", "2308": "Faculty Cabin", "2309": "Ladies Washroom", "2310": "Gents Washroom" } },
+      "5": { "name": "5th Floor", "rooms": { "2401": "Faculty Cabin", "2402": "Lab", "2403": "Lab", "2404": "DPD/COA/App Dev Lab", "2405": "Classroom", "2406": "Classroom", "2407": "Classroom", "2410": "Gents Washroom" } }
+    }
+  }
+}

@@ -261,29 +261,40 @@ function createGPSMarkerElement() {
 
 // ─── Indoor Search Panel ────────────────────────────────────────────────────
 function IndoorPanel({ onClose }) {
-  const [query, setQuery]       = useState('')
-  const [selected, setSelected] = useState(null)
+  const [query, setQuery]         = useState('')
+  const [results, setResults]     = useState([])
+  const [selected, setSelected]   = useState(null)
+  const [activeFloor, setActiveFloor] = useState(null)
 
-  // Build flat list of all rooms across both blocks
   const allRooms = []
   Object.entries(indoorData).forEach(([blockKey, blockData]) => {
-    // Sort floor keys numerically so Ground(0) → 1st → 2nd … displays correctly
-    const sortedFloors = Object.entries(blockData.floors).sort(([a], [b]) => parseInt(a) - parseInt(b))
-    sortedFloors.forEach(([floorKey, floorData]) => {
+    Object.entries(blockData.floors).forEach(([floorKey, floorData]) => {
       Object.entries(floorData.rooms).forEach(([roomId, roomName]) => {
         allRooms.push({ blockKey, blockLabel: blockData.name, floorKey, floorLabel: floorData.name, roomId, roomName })
       })
     })
   })
 
-  const filtered = query.trim()
-    ? allRooms.filter(r =>
-        r.roomId.toLowerCase().includes(query.toLowerCase()) ||
-        r.roomName.toLowerCase().includes(query.toLowerCase()) ||
-        r.floorLabel.toLowerCase().includes(query.toLowerCase()) ||
-        r.blockLabel.toLowerCase().includes(query.toLowerCase())
-      )
-    : allRooms
+  useEffect(() => {
+    if (!query.trim()) { setResults([]); return }
+    const q = query.toLowerCase()
+    setResults(
+      allRooms.filter(r =>
+        r.roomId.toLowerCase().includes(q) || r.roomName.toLowerCase().includes(q)
+      ).slice(0, 8)
+    )
+  }, [query])
+
+  const handleSelect = (room) => {
+    setSelected(room)
+    setQuery('')
+    setResults([])
+    setActiveFloor(room.floorKey)
+  }
+
+  const floorKeys = selected
+    ? Object.keys(indoorData[selected.blockKey]?.floors || {}).sort((a, b) => parseInt(a) - parseInt(b))
+    : []
 
   return (
     <div className="indoor-panel">
@@ -291,6 +302,9 @@ function IndoorPanel({ onClose }) {
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <Navigation size={16} color="#38bdf8" strokeWidth={2.2} />
           <span className="indoor-panel-title">Indoor Navigation</span>
+          {selected && (
+            <span className="indoor-block-badge">{selected.blockLabel}</span>
+          )}
         </div>
         <button className="sjec-close" style={{ position: 'static' }} onClick={onClose}>
           <X size={16} strokeWidth={2.2} />
@@ -302,64 +316,101 @@ function IndoorPanel({ onClose }) {
         <Search size={14} className="indoor-search-icon" strokeWidth={2.2} />
         <input
           className="indoor-search"
-          placeholder="Search room no. or name… e.g. 3502 or AIML Lab"
+          placeholder="Search room number or name... (e.g. 3502 or AIML Lab)"
           value={query}
-          onChange={e => { setQuery(e.target.value); setSelected(null) }}
+          onChange={e => setQuery(e.target.value)}
           autoFocus
         />
         {query && (
-          <button className="indoor-search-clear" onClick={() => { setQuery(''); setSelected(null) }}>
+          <button className="indoor-search-clear" onClick={() => { setQuery(''); setResults([]) }}>
             <X size={12} strokeWidth={2.5} />
           </button>
         )}
       </div>
 
-      {/* Scrollable room list */}
-      <div className="faculty-list">
-        {filtered.length === 0 && (
-          <div className="indoor-empty-hint">
-            <Building2 size={28} strokeWidth={1.5} color="#38bdf8" style={{ opacity: 0.4 }} />
-            <p>No rooms found for <strong>{query}</strong></p>
-          </div>
-        )}
-        {filtered.map((r) => (
-          <div
-            key={`${r.blockKey}-${r.roomId}`}
-            className={`faculty-item${selected?.roomId === r.roomId && selected?.blockKey === r.blockKey ? ' selected' : ''}`}
-            style={{ cursor: 'pointer' }}
-            onClick={() => setSelected(selected?.roomId === r.roomId && selected?.blockKey === r.blockKey ? null : r)}
-          >
-            <div className="faculty-item-icon" style={{ background: ROOM_TYPE_COLOR[getRoomType(r.roomName)] + '22', border: `1px solid ${ROOM_TYPE_COLOR[getRoomType(r.roomName)]}44` }}>
-              <div style={{ width: 8, height: 8, borderRadius: '50%', background: ROOM_TYPE_COLOR[getRoomType(r.roomName)] }} />
-            </div>
-            <div className="faculty-item-info">
-              <div className="faculty-item-name">{r.roomName}</div>
-              <div className="faculty-item-meta">
-                {r.roomId} · {r.floorLabel} · {r.blockLabel}
+      {/* Dropdown results */}
+      {results.length > 0 && (
+        <div className="indoor-results">
+          {results.map(r => (
+            <div key={`${r.blockKey}-${r.roomId}`} className="indoor-result-item" onClick={() => handleSelect(r)}>
+              <div className="indoor-result-dot" style={{ background: ROOM_TYPE_COLOR[getRoomType(r.roomName)] }} />
+              <div>
+                <div className="indoor-result-name">{r.roomName}</div>
+                <div className="indoor-result-meta">{r.roomId} · {r.floorLabel} · {r.blockLabel}</div>
               </div>
-            </div>
-            <ChevronRight size={14} strokeWidth={2.2} style={{ opacity: selected?.roomId === r.roomId && selected?.blockKey === r.blockKey ? 1 : 0.3, color: '#38bdf8', transition: 'opacity 0.2s' }} />
-          </div>
-        ))}
-      </div>
-
-      {/* Directions for selected room */}
-      {selected && (
-        <div className="indoor-directions" style={{ margin: '0 0 4px 0', borderTop: '1px solid rgba(56,189,248,0.12)', paddingTop: 10 }}>
-          <div className="indoor-directions-title">
-            <Navigation size={13} strokeWidth={2.3} />
-            Directions to {selected.roomId} · {selected.roomName}
-          </div>
-          {getDirections(selected.blockKey, selected.floorKey, selected.roomId, selected.roomName).map((step, i) => (
-            <div key={i} className="indoor-step">
-              <div className="indoor-step-num">{i + 1}</div>
-              <div className="indoor-step-text">{step}</div>
+              <ChevronRight size={14} strokeWidth={2.2} style={{ marginLeft: 'auto', opacity: 0.4 }} />
             </div>
           ))}
-          <div className="indoor-floor-tag">
-            <ArrowUp size={12} strokeWidth={2.5} />
-            {parseInt(selected.floorKey) === 0 ? 'Ground Floor' : `Floor ${selected.floorKey}`} of {selected.blockLabel}
+        </div>
+      )}
+
+      {/* Floor chooser for the selected block */}
+      {selected && !results.length && (
+        <>
+          <div className="indoor-floor-row">
+            {floorKeys.map(fk => (
+              <button
+                key={fk}
+                className={`indoor-floor-btn ${activeFloor === fk ? 'active' : ''}`}
+                onClick={() => setActiveFloor(fk)}
+              >
+                {indoorData[selected.blockKey].floors[fk].name}
+              </button>
+            ))}
           </div>
+
+          {activeFloor && (() => {
+            const floorData = indoorData[selected.blockKey].floors[activeFloor]
+            const rooms = Object.entries(floorData.rooms)
+            return (
+              <div className="indoor-floor-rooms">
+                <div className="indoor-floor-label">
+                  <Layers size={12} strokeWidth={2.3} /> {floorData.name} — {rooms.length} rooms
+                </div>
+                <div className="indoor-rooms-grid">
+                  {rooms.map(([rid, rname]) => (
+                    <div
+                      key={rid}
+                      className={`indoor-room-chip ${rid === selected.roomId && activeFloor === selected.floorKey ? 'highlight' : ''}`}
+                      style={{ borderColor: ROOM_TYPE_COLOR[getRoomType(rname)] + '55' }}
+                      onClick={() => handleSelect({ ...selected, roomId: rid, roomName: rname, floorKey: activeFloor, floorLabel: floorData.name })}
+                    >
+                      <span className="indoor-room-chip-dot" style={{ background: ROOM_TYPE_COLOR[getRoomType(rname)] }} />
+                      <span className="indoor-room-chip-id">{rid}</span>
+                      <span className="indoor-room-chip-name">{rname}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )
+          })()}
+
+          {/* Directions for selected room */}
+          {selected.floorKey === activeFloor && (
+            <div className="indoor-directions">
+              <div className="indoor-directions-title">
+                <Navigation size={13} strokeWidth={2.3} />
+                Directions to {selected.roomId} · {selected.roomName}
+              </div>
+              {getDirections(selected.blockKey, selected.floorKey, selected.roomId, selected.roomName).map((step, i) => (
+                <div key={i} className="indoor-step">
+                  <div className="indoor-step-num">{i + 1}</div>
+                  <div className="indoor-step-text">{step}</div>
+                </div>
+              ))}
+              <div className="indoor-floor-tag">
+                <ArrowUp size={12} strokeWidth={2.5} />
+                {parseInt(selected.floorKey) === 0 ? 'Ground Floor' : `Floor ${selected.floorKey}`} of {selected.blockLabel}
+              </div>
+            </div>
+          )}
+        </>
+      )}
+
+      {!selected && !results.length && query.length === 0 && (
+        <div className="indoor-empty-hint">
+          <Building2 size={28} strokeWidth={1.5} color="#38bdf8" style={{ opacity: 0.4 }} />
+          <p>Search for a room number like <strong>3502</strong> or a name like <strong>AIML Lab</strong></p>
         </div>
       )}
     </div>
@@ -444,16 +495,6 @@ function FacultyPanel({ onClose }) {
 }
 
 // ─── Building Double-click Popup ────────────────────────────────────────────
-// Normalise floor label: key 0 → "Ground Floor", key N → "Nth Floor"
-function floorLabel(floorKey, storedName) {
-  const n = parseInt(floorKey)
-  if (n === 0) return 'Ground Floor'
-  const suffixes = ['th', 'st', 'nd', 'rd']
-  const suffix = n <= 3 ? suffixes[n] : 'th'
-  // Only override if the stored name looks wrong (skips a number)
-  return storedName || `${n}${suffix} Floor`
-}
-
 function BuildingPopup({ blockKey, onClose }) {
   const blockData = indoorData[blockKey]
   if (!blockData) return null
@@ -484,7 +525,7 @@ function BuildingPopup({ blockKey, onClose }) {
             className={`building-floor-tab ${activeFloor === fk ? 'active' : ''}`}
             onClick={() => setActiveFloor(fk)}
           >
-            {floorLabel(fk, blockData.floors[fk].name)}
+            {blockData.floors[fk].name}
           </button>
         ))}
       </div>
@@ -653,37 +694,32 @@ export default function MapView({ userRole = 'visitor', roleLabel = 'Visitor' })
       map.on('mouseenter', 'nodes-bg', () => { map.getCanvas().style.cursor = 'pointer' })
       map.on('mouseleave', 'nodes-bg', () => { map.getCanvas().style.cursor = '' })
 
-      // Double-click on map — only trigger building popup when clicking the actual 3D building footprint
-      // Tight bounding boxes around Academic Block 2 and Block 3 physical footprints
-      const BLOCK3_BOUNDS = { minLng: 74.8990, maxLng: 74.8998, minLat: 12.9103, maxLat: 12.9112 }
-      const BLOCK2_BOUNDS = { minLng: 74.8983, maxLng: 74.8993, minLat: 12.9103, maxLat: 12.9112 }
-
+      // Double-click on map to detect building click
       map.on('dblclick', (e) => {
-        const { lng, lat } = e.lngLat
-
-        // Query rendered 3D building features at the click pixel
-        const features = map.queryRenderedFeatures(e.point, { layers: ['osm-3d'] })
-
-        // Only proceed if the user actually clicked on a building extrusion
-        if (!features || features.length === 0) return
-
-        // Check Block 3 footprint
-        if (
-          lng >= BLOCK3_BOUNDS.minLng && lng <= BLOCK3_BOUNDS.maxLng &&
-          lat >= BLOCK3_BOUNDS.minLat && lat <= BLOCK3_BOUNDS.maxLat
-        ) {
-          e.preventDefault()
-          setBuildingPopup('block3')
-          return
+        // Check if click is near Academic Block 3 node
+        const block3Node = campusData.nodes.find(n =>
+          n.label && n.label.toLowerCase().includes('academic block 3')
+        )
+        if (block3Node) {
+          const dx = Math.abs(e.lngLat.lng - block3Node.lng)
+          const dy = Math.abs(e.lngLat.lat - block3Node.lat)
+          if (dx < 0.0015 && dy < 0.0015) {
+            e.preventDefault()
+            setBuildingPopup('block3')
+            return
+          }
         }
-
-        // Check Block 2 footprint
-        if (
-          lng >= BLOCK2_BOUNDS.minLng && lng <= BLOCK2_BOUNDS.maxLng &&
-          lat >= BLOCK2_BOUNDS.minLat && lat <= BLOCK2_BOUNDS.maxLat
-        ) {
-          e.preventDefault()
-          setBuildingPopup('block2')
+        // Check block2
+        const block2Node = campusData.nodes.find(n =>
+          n.label && n.label.toLowerCase().includes('academic block 2')
+        )
+        if (block2Node) {
+          const dx = Math.abs(e.lngLat.lng - block2Node.lng)
+          const dy = Math.abs(e.lngLat.lat - block2Node.lat)
+          if (dx < 0.0015 && dy < 0.0015) {
+            e.preventDefault()
+            setBuildingPopup('block2')
+          }
         }
       })
 

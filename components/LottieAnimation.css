@@ -1,0 +1,63 @@
+.lottie-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.92);
+  text-align: center;
+}
+
+.lottie-placeholder p {
+  margin: 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+}
+
+.lottie-placeholder-figure {
+  position: relative;
+  width: 72px;
+  height: 96px;
+  animation: lottie-placeholder-bob 1.8s ease-in-out infinite;
+}
+
+.lottie-placeholder-head,
+.lottie-placeholder-body,
+.lottie-placeholder-legs {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.lottie-placeholder-head {
+  top: 0;
+  width: 28px;
+  height: 28px;
+}
+
+.lottie-placeholder-body {
+  top: 34px;
+  width: 36px;
+  height: 42px;
+  border-radius: 18px;
+}
+
+.lottie-placeholder-legs {
+  bottom: 0;
+  width: 48px;
+  height: 18px;
+  border-radius: 12px;
+}
+
+@keyframes lottie-placeholder-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
